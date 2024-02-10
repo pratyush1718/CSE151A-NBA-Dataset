@@ -4,8 +4,9 @@ The data we will be using for the group project is from the dataset: https://www
 
 Specifically we will be looking through play by play data from the 2018-2019 season. 
 
-The goal for our model is to use features such as the text in each observation related to away play as well as some of the player stats columns to help us predict the winner of a game.
-For the purpose of the model we will ommit information from the data during preprocessing that would give away information about game outcome as well as non numerical data that isn't very useful (i.e. game location, date, time)
+## About the Data & Our Goal:
+
+The NBA play-by-play dataset for the 2018-2019 season offers records of every play that occurred during games throughout the season. Each entry in the dataset includes features like the game clock, shot clock, team names, play type, and play outcome. Now, a very obvious prediction task is predicting the winning team... right? Well, since the dataset provides information about the sequence of plays during games, predicting the winning team is rather trivial. This is because the winning team remains constant throughout the whole game (At least in this dataset, since the winningTeam column just gives the end result of the entire game). That is to say, if a game has 200 plays represented by 200 rows in our dataset for that game, trying to use ML to predict the winning team would not factor in the variety of the plays that are run. Since the winning team (which, again, is an end result), does not change between plays, we are not going to be preprocessing our data according to that task. Instead, we want to predict specific play outcomes, which we can reshape as a classification task using preprocessing. Our prediction task now becomes the following: "given a time during the game, the two teams that are playing (among other features), can we predict the play that a team will run?"
 
 ## Data exploration:
  
@@ -18,3 +19,10 @@ For the purpose of the model we will ommit information from the data during prep
 
 ## Data Preprocessing:
 
+Identify columns that contain information irrelevant to the classification task, such as specific types of fouls, jump balls, etc. Remove these columns from the dataset using pandas' drop() function.
+
+**Refactor Play Column:**
+
+Analyze the "Play" column to identify distinct play outcomes. Create a mapping of each play to a unique category, such as "make," "miss," "rebound," "turnover," "foul," and "no-play." The significance of "no-play" here is a strategy we are going to implement to process frequent null data in the play column. We will use pandas apply() function to map each play outcome to its corresponding category, creating a new column for the refactored play vector. Then, we will convert the refactored play column into a one-hot encoded format, where each category becomes its own column. We also aim to one-hot encode other categorical data such as location, teams playing, etc. Lastly, we will also normalize and split the temporal data part of the dataset (such as game date, time of play, quarter number, secLeft, etc.)
+
+By the end of our preprocessing step, we will have prepped the data to predict the play that a team will run at any given point in the game!
