@@ -27,6 +27,11 @@ Analyze the "Play" column to identify distinct play outcomes. Create a mapping o
 
 By the end of our preprocessing step, we will have prepped the data to predict the play that a team will run at any given point in the game!
 
+## Describing the Data
+
+![Capture](https://github.com/pratyush1718/CSE151A-NBA-Dataset/assets/83377067/dcfc4bc6-bed8-477c-a431-0aaaf960a8ce)
+![Capture2](https://github.com/pratyush1718/CSE151A-NBA-Dataset/assets/83377067/2c02c998-c1e9-49e2-878b-87e472724cd7)
+
 
 ## Next Two Models
 Two more models for predicting NBA play outcomes could include a CNN and a DNN. A CNN and a DNN could be trained to learn spatial patterns and relationships within play descriptions or game context, leveraging features such as text embeddings. In order to accurately reflect and model the complexities of the data, there's a lot of things we could improve on to make a better neural network. One of the things we aim to improve is the major imbalance in the target classifications. No play especially has a lot of data, at around 200K, while other classes have data in the tens of thousands. In our next models, in order to solve the data imbalance and poor model performance, we're going to preprocess our data differently by merging Away Play and Home Play to just one column that holds all the Plays. This way, when we one hot encode, we will end up with 8 classifications instead of the 15 we have now. 
