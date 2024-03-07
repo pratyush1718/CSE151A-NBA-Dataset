@@ -35,7 +35,7 @@ By the end of our preprocessing step, we will have prepped the data to predict t
 ![Capture4](https://github.com/pratyush1718/CSE151A-NBA-Dataset/assets/83377067/3553a1d2-ce62-450a-be81-24714e8efce2)
 
 ## Model 1
-As it's shown below, the loss for both train and validation steadily rose instead of decreasing. While it's possible that our model could make improvements in finding the optimal hyperparamaters, it's more likely that our model is not doing well because our data is heavily imbalanced. As shown in the confusion matrix, the model only predicts one class and this is most likely the class that is reflected in a majority of the dataset. If we choose to continue to with this model in the future, we could improve the model by tuning hyperparamters and balancing the data by resampling so the classes are more evenly present.
+As it's shown below, the loss for both train and validation steadily rose instead of decreasing. While it's possible that our model could make improvements in finding the optimal hyperparamaters, it's more likely that our model is not doing well because our data is heavily imbalanced. As shown in the confusion matrix, the model only predicts one class and this is most likely the class that is reflected in a majority of the dataset. This aligns with the log losses for train (~4.45) and test (~24.03) with the loss for train being much lower than for test. If we choose to continue to with this model in the future, we could improve the model by tuning hyperparamters and balancing the data by resampling so the classes are more evenly present.
 
 ![image](https://github.com/pratyush1718/CSE151A-NBA-Dataset/assets/81598019/610633a2-0326-4112-9d26-1094457f647b)
 
