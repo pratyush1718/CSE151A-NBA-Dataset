@@ -52,7 +52,7 @@ By the end of our preprocessing step, we will have prepped the data to predict t
 ![Capture3](https://github.com/pratyush1718/CSE151A-NBA-Dataset/assets/83377067/5766896b-b421-42ad-b59b-4b3e17c50e9e)
 ![Capture4](https://github.com/pratyush1718/CSE151A-NBA-Dataset/assets/83377067/3553a1d2-ce62-450a-be81-24714e8efce2)
 
-### Model One
+## Model One
 As it's shown below, the loss for both train and validation steadily rose instead of decreasing. While it's possible that our model could make improvements in finding the optimal hyperparamaters, it's more likely that our model is not doing well because our data is heavily imbalanced. As shown in the confusion matrix, the model only predicts one class and this is most likely the class that is reflected in a majority of the dataset. This aligns with the log losses for train (~4.45) and test (~24.03) with the loss for train being much lower than for test. If we choose to continue to with this model in the future, we could improve the model by tuning hyperparamters and balancing the data by resampling so the classes are more evenly present.
 
 ![image](https://github.com/pratyush1718/CSE151A-NBA-Dataset/assets/81598019/610633a2-0326-4112-9d26-1094457f647b)
@@ -60,8 +60,17 @@ As it's shown below, the loss for both train and validation steadily rose instea
 ### Next Two Models
 Two more models for predicting NBA play outcomes could include a CNN and a DNN. A CNN and a DNN could be trained to learn spatial patterns and relationships within play descriptions or game context, leveraging features such as text embeddings. In order to accurately reflect and model the complexities of the data, there's a lot of things we could improve on to make a better neural network. One of the things we aim to improve is the major imbalance in the target classifications. No play especially has a lot of data, at around 200K, while other classes have data in the tens of thousands. In our next models, in order to solve the data imbalance and poor model performance, we're going to preprocess our data differently by merging Away Play and Home Play to just one column that holds all the Plays. This way, when we one hot encode, we will end up with 8 classifications instead of the 15 we have now. 
 
-### Model Two
-
-## Conclusion
+### Conclusion
 Our analysis of the model trained on the NBA dataset reveals several key findings. The model architecture consists of multiple layers with sigmoid and softmax activations, and prior to training, the dataset undergoes preprocessing steps including feature selection, one-hot encoding, and feature normalization in order to analyse the "Play" column accordingly. However, during the training process, the model demonstrates an increase in loss over epochs, which indicates potential issues with vanishing or exploding gradients. The classification report and log loss highlight poor performance across various classes and a significant discrepancy between the training and testing errors, suggesting overfitting. This overfitting is likely due to the model's high complexity, as indicated by the large number of parameters. To improve  performance, we will need to resample the data and further refine the preprocessing steps.
+
+## Model Two
+Looking at the losses from our previous model and especially the graph with respect to training epochs, we see an unintuitive visual. The loss, instead of decreasing over time, actually increases. We see numerous causes for concern and improvements. One improvement we wish to make with this milestone is to modify our data processing. As seen in our previous notebook, there was a huge data imbalance which was further exaggerated by having 15 classes for our model to predict. In this milestone, we address both the issues by changing the output dimension of our model to (n, 1) instead of (2n, 2). More specifically, we are merging the away team play and home team play into one column and decreasing the occurrences of “no play.” Moreover, we will also be trying a DNN instead of a regular neural network to better capture the complexities for this problem.
+
+![Capture](https://github.com/pratyush1718/CSE151A-NBA-Dataset/assets/83377067/75481dc5-d57a-4a10-84fb-9e8d5a3667b2)
+
+### Consclusion
+Our second model is a neural network classifier designed to predict various play types in basketball games based on our dataset containing features such as game type, location, quarter, time remaining, scores, and play descriptions. The model achieved decent accuracy after training for 15 epochs, with approximately 26.56% on the training set and 26.37% on the validation set. The classification report reveals some varience in the model's performance across different play types, with relatively higher precision and recall for predicting "play_make" and "play_turnover," but lower scores for classes like "play_foul" and "play_rebound." To improve the model we can include other features to incorporate additional relevant features such as time remaining in the quarter and player statistics. Also, we can experiment with different neural network architectures and hyperparameters to help find a more suitable model configuration. Our model 2 shows improvement over our model 1 by achieving stable losses and predicting multiple classes, with modest accuracy. While both models have data imbalance, model 2 attempts to address this issue through further one-hot encoding, showing our attempt to handle our data sets challenges that we saw in model 1.
+
+
+
 
