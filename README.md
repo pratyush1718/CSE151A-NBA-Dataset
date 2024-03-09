@@ -29,7 +29,7 @@ Analyze the "Play" column to identify distinct play outcomes. Create a mapping o
 
 By the end of our preprocessing step, we will have prepped the data to predict the play that a team will run at any given point in the game!
 
-## Describing the Data
+### Describing the Data
 
 ![Capture](https://github.com/pratyush1718/CSE151A-NBA-Dataset/assets/83377067/dcfc4bc6-bed8-477c-a431-0aaaf960a8ce)
 ![Capture2](https://github.com/pratyush1718/CSE151A-NBA-Dataset/assets/83377067/2c02c998-c1e9-49e2-878b-87e472724cd7)
