@@ -6,7 +6,7 @@ Specifically we will be looking through play by play data from the 2018-2019 sea
 
 ## Introduction:
 
-Nationally as well as globally, basketball is one of the most popular sports to watch for entertainment. Like with many other forms of entertainment, fans and enthusiasts alike find predicting game outcomes a fun activity, like by the March Madness brackets that people fill out in preparation for the NCAA basketball tournaments. And it's no wonder people want to predict the outcome of games; there's many different factors and strategies that combine together to determine the outcome of a game. For this reason, we were interested in modeling and predicting using a play-by-play basketball dataset. Additionally, sports analytics has the potential to have a direct impact in increasing a team's likelihood of winning so it's a great skill to have. A good model would not only be accurate in training, but also have a good accuracy on unseen data because this means it would generalize well in the real world. 
+Nationally as well as globally, basketball is one of the most popular sports to watch for entertainment. Like with many other forms of entertainment, fans and enthusiasts alike find predicting game outcomes a fun activity, like the March Madness brackets that people fill out in preparation for the NCAA basketball tournaments. And it's no wonder people want to predict the outcome of games; there's many different factors and strategies that combine together to make the outcome of a game challenging to predict. For this reason, we were interested in creating a model to predict the outcome of a play-by-play basketball dataset because we believe that it would challenge us and allow us to apply the skills we learned practically. Additionally, sports analytics has the potential to have a direct impact in increasing a team's likelihood of winning so it's a useful area to apply analytics. A good model would not only be accurate in training, but also have a good accuracy on unseen data because this means it would generalize well to real world data. 
 
 The NBA play-by-play dataset for the 2018-2019 season offers records of every play that occurred during games throughout the season. Each entry in the dataset includes features like the game clock, shot clock, team names, play type, and play outcome. Now, a very obvious prediction task is predicting the winning team... right? Well, since the dataset provides information about the sequence of plays during games, predicting the winning team is rather trivial. This is because the winning team remains constant throughout the whole game (At least in this dataset, since the winningTeam column just gives the end result of the entire game). That is to say, if a game has 200 plays represented by 200 rows in our dataset for that game, trying to use ML to predict the winning team would not factor in the variety of the plays that are run. Since the winning team (which, again, is an end result), does not change between plays, we are not going to be preprocessing our data according to that task. Instead, we want to predict specific play outcomes, which we can reshape as a classification task using preprocessing. Our prediction task now becomes the following: "Given a time during the game, the two teams that are playing (among other features), can we predict the play that a team will run?"
 
@@ -14,17 +14,25 @@ The NBA play-by-play dataset for the 2018-2019 season offers records of every pl
 Figure 1: Our Dataset Example
  <img width="1579" alt="Screenshot 2024-03-09 at 9 56 32 AM" src="https://github.com/pratyush1718/CSE151A-NBA-Dataset/assets/81598019/f258dfb6-a04b-4317-9cc8-b1ebd43b5c21">
 </p>
+</br>
+In a paper entitled "Modeling basketball play-by-play data" by Vračar, Štrumbelj, and Kononenko, the authors provide a methodology in producing a realistic simulation of a basketball game between two teams. Their focus was on capturing the context of the game at any given moment and then generalizing that to the broader game context of which team wins and which team loses. By fine tuning a generalized model, they were later able to successfully apply it to three seasons of NBA games with better predictive accuracy than other existing models. While this paper could be helpful in improving our model, there's some differences. Our data features a whole season so it has multiple teams, unlike Vračar, Štrumbelj, and Kononenko's model which only focuses on two teams at a time. Their general model was also not built on any real world data unlike our model, which will be dependent on the 2018-2019 NBA season data. And lastly, as shown in the figure below, their model has quite a significance on time where intervals between plays are highly relevant. While our model uses time, it's not emphasized as it's not the only feature we use.
 
+<p align="center">
+Figure 2: Generated Graphs from Two Models that Emphasize Time
+</br>
+<img width="614" alt="Screenshot 2024-03-09 at 10 31 03 AM" src="https://github.com/pratyush1718/CSE151A-NBA-Dataset/assets/81598019/641b5b7a-dd94-46e2-b749-9f1ccdd59dab">
+
+Paper citation:
+Petar Vračar, Erik Štrumbelj, Igor Kononenko, Modeling basketball play-by-play data, Expert Systems with Applications, Volume 44, 2016, Pages 58-66, ISSN 0957-4174, https://doi.org/10.1016/j.eswa.2015.09.004.
 
 ## Methods
 
 ### Data Exploration:
- 
-  We will plot the original data in the form of a histogram, pairplot, correlation matrix, and a heat map.
-  We will also print out the list of features that our data starts out with prior to doing the preprocessing. 
-  Note: due to the nature of play by play data, for many observations many of the features include null data.
-  Note2: the data includes both categorical and numerical data.
 
+We will plot the original data in the form of a histogram, pairplot, correlation matrix, and a heat map.
+We will also print out the list of features that our data starts out with prior to doing the preprocessing. 
+Note: due to the nature of play by play data, for many observations many of the features include null data.
+Note2: the data includes both categorical and numerical data.
 
 
 ### Data Preprocessing:
