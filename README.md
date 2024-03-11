@@ -69,12 +69,16 @@ By the end of our preprocessing step, we will have prepped the data to predict t
 
 
 ### Model One
-what methods were used in model 1
+A DNN was implemented using Keras. The DNN features an input layer, two hidden layers, and one output layer. The two hidden layers both use the sigmoid activation function while the output layer uses softmax. The chosen optimizer was Adam, loss was categorical cross entropy, and the model was fit on the training data with a validation split of 0.2. A summary of the model is shown below.
 
-### Model One
+<p align="left">
+<img width="600" alt="Screenshot 2024-03-10 at 8 05 55 PM" src="https://github.com/pratyush1718/CSE151A-NBA-Dataset/assets/81598019/4b208fbc-82af-4301-9979-a3b1be3e9cc1">
+</p>
+
+### Model Two
 "
 
-### Model One
+### Model Three
 "
 
 
