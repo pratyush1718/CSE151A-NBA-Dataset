@@ -68,8 +68,26 @@ Looking at the losses from our previous model and especially the graph with resp
 
 ![Capture](https://github.com/pratyush1718/CSE151A-NBA-Dataset/assets/83377067/75481dc5-d57a-4a10-84fb-9e8d5a3667b2)
 
-### Consclusion
+### Conclusion
 Our second model is a neural network classifier designed to predict various play types in basketball games based on our dataset containing features such as game type, location, quarter, time remaining, scores, and play descriptions. The model achieved decent accuracy after training for 15 epochs, with approximately 26.56% on the training set and 26.37% on the validation set. The classification report reveals some varience in the model's performance across different play types, with relatively higher precision and recall for predicting "play_make" and "play_turnover," but lower scores for classes like "play_foul" and "play_rebound." To improve the model we can include other features to incorporate additional relevant features such as time remaining in the quarter and player statistics. Also, we can experiment with different neural network architectures and hyperparameters to help find a more suitable model configuration. Our model 2 shows improvement over our model 1 by achieving stable losses and predicting multiple classes, with modest accuracy. While both models have data imbalance, model 2 attempts to address this issue through further one-hot encoding, showing our attempt to handle our data sets challenges that we saw in model 1.
+
+## Collaboration
+What each group member contributed for this project.
+
+#### Kesar Arora
+
+
+#### Pratyush Chand
+
+
+#### Jaeda Gantulga
+
+
+#### Hannah Ghassemian
+
+
+#### Pranav Mekkoth
+
 
 
 
