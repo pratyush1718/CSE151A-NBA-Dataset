@@ -76,7 +76,7 @@ A DNN was implemented using Keras. The DNN features an input layer, two hidden l
 </p>
 
 ### Model Two
-"
+what methods were used in model two
 
 ### Model Three
 "
