@@ -76,13 +76,17 @@ A DNN was implemented using Keras. The DNN features an input layer, two hidden l
 </p>
 
 ### Model Two
+
 Model Two was designed as a DNN using the Keras framework. It consists of an input layer, eight hidden layers, and an output layer. The hidden layers are structured with varying numbers of neurons, including 16, 32, 64, 128, 256, 128, 64, and 32 respectively. Each hidden layer, with the exception of the final one, uses the ReLU activation function to introduce non-linearity into the model. The output layer employs the softmax activation function to produce probabilities for each class. The Adam optimizer was employed, along with the categorical cross-entropy loss function. During training, the dataset was split into training and validation sets, with a 20% validation split. Additionally, early stopping was utilized to prevent overfitting, using 10 epochs. 
 Summary of the model:
 ![Capture](https://github.com/pratyush1718/CSE151A-NBA-Dataset/assets/83377067/b971cbcd-9ad1-4e1e-a0fb-83606672f791)
 
 
 ### Model Three
-"
+
+Model Three was designed as a Nueral Network that used the Keras Framework. The CNN is made up of an input layer, 5 hidden layers and an output layer. The hidden layers differ from those of the nueral network in the 1st model because it includes 12, 8, 28, 15, and 8 nuerons each while using a combination of the relu, softmax, and sigmoid activation functions. We chose to start with a sigmoid activation function and then do 2 layers of relu before doing sigmoid and ending with softmax as in model 1 in order to introduce a differnent sort of non-linearity to the model. We wanted to see if having this combination of activation functions in addition to the different number of nuerons in each layer will help our model predict the non-linear features we were predicting based off. We used the softmax output layer in order to produce the probabilities for each class. For our training, we used a train/test split of 80/20%. We used k-fold to help stop our model from overfitting
+
+![Capture]()
 
 
 
@@ -116,6 +120,7 @@ Our second model is a neural network classifier designed to predict various play
 
 ### Model Three
 
+Our 3rd model was a nueral network classifer that is meant to predic the play types teams can make in a basekerball game. The play by play dataset we used inclued features such as game type, location, quarter, time remaining, score, and play description. After running our model, we get a training accuracy of about 25.6%, a validation accruacry of about 26% and a test error of about 1.57. Once we finished training the model and finding both the accuracy and errors of the train/test/validation sets, then  
 
 
 
