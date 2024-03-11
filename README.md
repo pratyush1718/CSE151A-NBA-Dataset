@@ -76,7 +76,10 @@ A DNN was implemented using Keras. The DNN features an input layer, two hidden l
 </p>
 
 ### Model Two
-what methods were used in model two
+Model Two was designed as a DNN using the Keras framework. It consists of an input layer, eight hidden layers, and an output layer. The hidden layers are structured with varying numbers of neurons, including 16, 32, 64, 128, 256, 128, 64, and 32 respectively. Each hidden layer, with the exception of the final one, uses the ReLU activation function to introduce non-linearity into the model. The output layer employs the softmax activation function to produce probabilities for each class. The Adam optimizer was employed, along with the categorical cross-entropy loss function. During training, the dataset was split into training and validation sets, with a 20% validation split. Additionally, early stopping was utilized to prevent overfitting, using 10 epochs. 
+Summary of the model:
+![Capture](https://github.com/pratyush1718/CSE151A-NBA-Dataset/assets/83377067/b971cbcd-9ad1-4e1e-a0fb-83606672f791)
+
 
 ### Model Three
 "
