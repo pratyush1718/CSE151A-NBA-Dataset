@@ -139,6 +139,7 @@ What each group member contributed to this project.
 
 
 #### Pratyush Chand
+Did data preprocessing and wrote the introduction section for it, also created model two and plotted training/testing for it, modified model 3 architecture.  
 
 
 #### Jaeda Gantulga
