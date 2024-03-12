@@ -149,6 +149,7 @@ Created Model One and wrote the methods, results, and discussion section for it.
 Graphed results for training vs validation vs testing and Grid Search for Model 2. Wrote up methods, results, and conclusion for Model 2. Helped with inital data exploration graphs. 
 
 #### Pranav Mekkoth
+Helped tweak model to testing as well as do graphing Training/Test error for model 1. I also wrote the code to build the CNN classifier in model 3. Helped to write the model 3 sections for data preprocessing, as well as discussion sections.
 
 
 
