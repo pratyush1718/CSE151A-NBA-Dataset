@@ -146,7 +146,7 @@ Did data preprocessing and wrote the introduction section for it, also created m
 Created Model One and wrote the methods, results, and discussion section for it. Added more context to the introduction section by adding a snapshot of our dataset and a relevant paper with context and a figure. Wrote the conclusion section.
 
 #### Hannah Ghassemian
-
+Graphed results for training vs validation vs testing and Grid Search for Model 2. Wrote up methods, results, and conclusion for Model 2. Helped with inital data exploration graphs. 
 
 #### Pranav Mekkoth
 
