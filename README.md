@@ -87,8 +87,7 @@ Summary of the model:
 
 Model Three was designed as a Nueral Network that used the Keras Framework. The CNN is made up of an input layer, 5 hidden layers and an output layer. The hidden layers differ from those of the nueral network in the 1st model because it includes 12, 8, 28, 15, and 8 nuerons each while using a combination of the relu, softmax, and sigmoid activation functions. We chose to start with a sigmoid activation function and then do 2 layers of relu before doing sigmoid and ending with softmax as in model 1 in order to introduce a different sort of non-linearity to the model. We wanted to see if having this combination of activation functions in addition to the different number of nuerons in each layer will help our model predict the non-linear features we were predicting based off. We used the softmax output layer in order to produce the probabilities for each class. For our training, we used a train/test split of 80/20%. We used k-fold cross validation as well as early stopping to help our model from overfitting. 
 
-![Capture](Screenshot 2024-03-11 201523.png)
-
+![Capture](https://github.com/pratyush1718/CSE151A-NBA-Dataset/assets/97641097/f92c3262-4a6f-47b5-8af6-1e9967694a0d)
 
 
 ## Results
