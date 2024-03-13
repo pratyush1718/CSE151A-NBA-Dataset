@@ -108,6 +108,9 @@ Looking at the losses from our previous model and especially the graph with resp
 ### Model Three
 For Model three, we decided to add a 1D convolutional layer to our the model to process sequences. We also added a max pooling layer to reduce to dimensionality of the model and flattened the layer to pass it to a dense layer afterwards. While our accuracy does seem to get slightly better after each test on average, the differences are marginal and are relatively similar to the previous model. Again, the improvements mainly lie between the data processing and the fact that we are trying to predict a play by play with numerous columns. Even reducing the classifications doesn't help as much as it is supposed to due to the sheer amount of data and different scenarios that are actually possible within a NBA game. 
 
+<img width="866" alt="Screen Shot 2024-03-12 at 10 14 06 PM" src="https://github.com/pratyush1718/CSE151A-NBA-Dataset/assets/55569155/15a6b3c7-42b4-49ab-8d48-f2bd74f34272">
+
+
 
 
 ## Discussion
